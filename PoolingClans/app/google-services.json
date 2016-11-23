@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "554470510581",
+    "firebase_url": "https://pooling-clans-c6bcd.firebaseio.com",
+    "project_id": "pooling-clans-c6bcd",
+    "storage_bucket": "pooling-clans-c6bcd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554470510581:android:6cf84f0e2947e4cb",
+        "android_client_info": {
+          "package_name": "com.nanodegree.jmunoz.poolingclans"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554470510581-dk3kotdi6chc9o5df7qcl9916a9nac5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAm08ZiRiJP5azl7vifo2XKJCs7azrJfk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Pooling Clans</string>
+    <string name="facebook_app_id">170922436711081</string>
+    <string name="fb_login_protocol_scheme">fb170922436711081</string>
 
 
 </resources>

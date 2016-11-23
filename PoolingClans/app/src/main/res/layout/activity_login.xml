@@ -10,15 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nanodegree.jmunoz.poolingclans.LoginActivity">
 
-    <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
-
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
@@ -35,7 +26,8 @@
                 android:layout_height="@dimen/login_icon_size"
                 android:id="@+id/appIcon"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/app_icon" />
+                android:src="@drawable/app_icon"
+                android:layout_marginTop="@dimen/login_icon_margin"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,10 +39,17 @@
                 android:textColor="@color/colorPrimary"/>
 
             <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
+                android:id="@+id/google_sign_in_button"
+                android:layout_width="@dimen/login_button_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/login_button_margin"/>
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/face_sign_in_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
     </ScrollView>
