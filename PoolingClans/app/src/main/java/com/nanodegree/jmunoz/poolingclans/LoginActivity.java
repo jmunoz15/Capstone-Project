@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
 import com.facebook.AccessToken;
@@ -34,10 +33,10 @@ import com.google.firebase.auth.GoogleAuthProvider;
  * A login screen that offers login via Google and Facebook.
  */
 public class LoginActivity extends AppCompatActivity implements FacebookCallback<LoginResult>,
-        GoogleApiClient.OnConnectionFailedListener, View.OnClickListener{
+        GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     public static final String TAG = LoginActivity.class.getCanonicalName();
-    public static final int  RC_SIGN_IN = 0;
+    public static final int RC_SIGN_IN = 0;
 
     private CallbackManager mFacebookManager;
     private FirebaseAuth mAuth;
@@ -58,7 +57,7 @@ public class LoginActivity extends AppCompatActivity implements FacebookCallback
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
-        }
+            }
         };
         mAuth.addAuthStateListener(mAuthListener);
         FacebookSdk.sdkInitialize(getApplicationContext());
@@ -71,7 +70,6 @@ public class LoginActivity extends AppCompatActivity implements FacebookCallback
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
         setContentView(R.layout.activity_login);
-
         mFacebookManager = CallbackManager.Factory.create();
         LoginButton loginButton = (LoginButton) findViewById(R.id.face_sign_in_button);
         loginButton.setReadPermissions("email", "public_profile");
@@ -83,7 +81,6 @@ public class LoginActivity extends AppCompatActivity implements FacebookCallback
     @Override
     public void onStart() {
         super.onStart();
-
     }
 
     @Override
@@ -99,8 +96,7 @@ public class LoginActivity extends AppCompatActivity implements FacebookCallback
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSignInResult(result);
-        }
-        else {
+        } else {
             mFacebookManager.onActivityResult(requestCode, resultCode, data);
         }
     }
